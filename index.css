@@ -1,0 +1,475 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    counter-reset: rabit-game;
+    display: grid;
+    place-items: center;
+}
+ input:checked{
+    counter-increment:  rabit-game;
+   
+}
+
+
+ input[type=checkbox]{
+    appearance: none; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    cursor: pointer;
+    z-index: 2;
+}
+ input[type=checkbox]:focus{
+    appearance: none; 
+    outline: none;
+}
+.total-count{
+    position: relative;
+    top: calc(-558px - 16px);
+    left: calc(50% - 33px);
+
+}
+.total-count::after{
+    content: counter( rabit-game);
+}
+.screen-container{
+    width:300px ;
+    height:600px ;
+    position: relative;
+    border: 8px solid black;
+    border-radius: 40px;
+    background-color: #CCEFFF;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30),
+    0 15px 12px rgba(0,0,0,0.22) ;
+    overflow: hidden;
+}
+.layer-1{
+    width: 80px;
+    height: 450px;
+    bottom: 0;
+    right: 60px;
+    position: absolute;
+    z-index: 1;
+    animation-name: jump;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; 
+}
+@keyframes jump{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: -55px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+.layer-2{
+    width: 80px;
+    height: 450px;
+    bottom: 0;
+    left: 60px;
+    position: absolute;
+    z-index: 2;
+    animation-name: jump;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+.layer-3{
+    width:200px ;
+    height:390px ;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: green;
+    position: absolute;
+    z-index: 3;
+
+}
+.layer-4{
+    width: 80px;
+    height: 350px;
+    bottom: 0;
+    left: 20px;
+    position: absolute;
+    z-index: 4;
+    animation-name: jump;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+.layer-5{
+    width:180px ;
+    height:290px ;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: rgb(59, 121, 59);
+    position: absolute;
+    z-index: 5;
+
+}
+.layer-6{
+    width: 80px;
+    height: 250px;
+    bottom: 0;
+    right: 20px;
+    position: absolute;
+    z-index: 6;
+    animation-name: jump;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+.layer-7{
+    width:180px ;
+    height:190px ;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: rgb(112, 121, 59);
+    position: absolute;
+    z-index: 7;
+
+}
+.layer-8{
+    width: 80px;
+    height:70px ;
+    bottom: -1px;
+    left: -10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 11;
+
+}
+.layer-8_5{
+    width: 67px;
+    height:50px ;
+    bottom: -9px;
+    left: 34px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 11;
+
+}
+
+.layer-9{
+    width: 80px;
+    height:70px ;
+    bottom: -1px;
+    right: -10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 11;
+
+}
+.layer-9_5{
+    width: 67px;
+    height:50px ;
+    bottom: -9px;
+    right: 34px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 11;
+
+}
+.layer-9_6{
+    width: 60px;
+    height:50px ;
+    bottom:17px;
+    right: 23px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 11;
+
+}
+.layer-10{
+    width: 100px;
+    height: 80px;
+    bottom: 37px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    background-color: greenyellow;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+
+}
+.layer-10_5{
+    width: 120px;
+    height: 100px;
+    bottom: -12px;
+    right: 80px;
+    left: 0;
+    margin: 0 auto;
+    background-color: greenyellow;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+
+}
+.layer-10_6{
+    width: 120px;
+    height: 100px;
+    bottom: -12px;
+    right: 0;
+    left: 80px;
+    margin: 0 auto;
+    background-color: greenyellow;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+
+}
+ .left-ear-outter{
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+    background-color: white;
+    border-radius: 90%;
+}
+.left-ear-inner{
+    width: 10px;
+    height: 45px;
+    position: absolute;
+    left: 15px;
+    top: 6px;
+    background-color: pink;
+    border-radius: 90%;
+}
+.right-ear-outter{
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+    background-color: white;
+    border-radius: 90%;
+}
+.right-ear-inner{
+    width: 10px;
+    height: 45px;
+    position: absolute;
+    right: 15px;
+    top: 6px;
+    background-color: pink;
+    border-radius: 90%;
+}
+.head{
+    width:70% ;
+    height:11% ;
+    position: absolute;
+    top:30px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    background-color:white ;
+    border-radius: 50%;
+}
+.head__eye{
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top:15px;
+    background-color: black;
+    border-radius: 50%;
+    animation-name: blink;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+   
+
+}
+@keyframes blink{
+    0%{
+      opacity: 1;
+    }
+    5%{
+       opacity: 0;
+    }
+    10%{
+      opacity: 1;
+    }
+}
+.head__eye--right{
+    right:18px
+}
+.head__eye--left{
+    left: 18px;
+}
+.layer-4 .left-ear-outter{
+    width: 0px;
+    height: 39px;
+    border: 2px solid #cbe115;
+    position: absolute;
+    left: 27px;
+    top:-6px;
+    background-color: #cbe115;
+    transform: rotate(-19deg);
+}
+.layer-4 .right-ear-outter{
+    width: 0px;
+    height: 39px;
+    border: 2px solid #cbe115;
+    position: absolute;
+    right: 27px;
+    top:-6px;
+    background-color: #cbe115;
+    transform: rotate(19deg);
+}
+.layer-4 .head{
+    width:50px ;
+    height:50px ;
+    position: absolute;
+    top:13px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    background-color:#FDDDCA ;
+    border-radius:50%;
+}
+.layer-4 .nose{
+    position: absolute;
+    width: 18px;
+    height: 10px;
+    top:25px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+.layer-4 .nose__fose--right{
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top:2px;
+    right: 3px;
+    background-color: black;
+    border-radius: 50%;
+}
+.layer-4 .nose__fose--left{
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top:2px;
+    left: 3px;
+    background-color: black;
+    border-radius: 50%;
+}
+.layer-4 .left-ear-outter{
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    top:4px;
+    left: 15px;
+    background-color:#FDDDCA ;
+    border: 1px solid #FDDDCA;
+    box-shadow: 0 1px 1px, 0 0px 1px;
+    transform: rotate(-1deg);
+
+}
+.layer-4 .right-ear-outter{
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    top:4px;
+    right: 15px;
+    background-color:#FDDDCA ;
+    border: 1px solid #FDDDCA;
+    box-shadow: 0 0 1px, 0 1px 1px;
+    transform: rotate(1deg);
+
+}
+.layer-6 .left-ear-outter{
+    width: 0px;
+    height: 39px;
+    border: 2px solid #cbe115;
+    position: absolute;
+    left: 27px;
+    top:-6px;
+    background-color: #cbe115;
+    transform: rotate(-19deg);
+}
+.layer-6 .right-ear-outter{
+    width: 0px;
+    height: 39px;
+    border: 2px solid #cbe115;
+    position: absolute;
+    right: 27px;
+    top:-6px;
+    background-color: #cbe115;
+    transform: rotate(19deg);
+}
+.layer-6 .head{
+    width:64% ;
+    height:15% ;
+    position: absolute;
+    top:17px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    background-color:#cbe115 ;
+    border-radius: 31%;
+}
+.layer-6 .arm--right{
+    height: 23px;
+    position: absolute;
+    top:16px;
+    right:4px;
+    background-color:#cbe115 ;
+   border: 2px solid #cbe115;
+   transform: rotate(60deg);
+
+}
+.layer-6 .arm--left{
+    height: 23px;
+    position: absolute;
+    top:16px;
+    left:4px;
+    background-color:#cbe115 ;
+   border: 2px solid #cbe115;
+   transform: rotate(-60deg);
+
+}
+.triangle{
+    position: absolute;
+    top:-10px;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(-135deg, rgb(129, 53, 17) 25%, transparent 25%) -49px 0, linear-gradient(135deg, rgb(129, 53, 17) 25%, transparent 25%) -50px 0, linear-gradient(-45deg, rgb(129, 53, 17) 25%, transparent 25%), linear-gradient(45deg, rgb(129, 53, 17)25%, transparent 25%);
+    background-size: 51px 87px;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    z-index: 3;
+}
+.triangle-2{
+    position: absolute;
+    top:-1px;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(135deg, rgb(168, 126, 48) 25%, transparent 25%) -50px 0,
+    linear-gradient(-135deg, rgb(168, 126, 48) 25%, transparent 25%) -50px 0,
+    linear-gradient(45deg, rgb(168, 126, 48) 25%, transparent 25%),
+    linear-gradient(-45deg, rgb(168, 126, 48) 25%, transparent 25%);
+    background-size: 51px 87px;
+}
